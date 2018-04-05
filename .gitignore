@@ -1,0 +1,3 @@
+node_modules/
+vehicle/deploy.config.json
+.DS_Store

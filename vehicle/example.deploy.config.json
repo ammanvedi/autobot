@@ -1,0 +1,10 @@
+{
+    "localSource": "./src/**/*",
+    "remoteSource": "./usr/home/pibot/vehicle-workspace",
+    "host": {
+        "ip": "xxx.xxx.xx.xx",
+        "hostname": "pibot",
+        "password": "1234amman"
+    },
+    "runCommand": "node index.js"
+}

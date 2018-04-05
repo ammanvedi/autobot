@@ -1,0 +1,11 @@
+{
+  "name": "autobot",
+  "version": "1.0.0",
+  "description": "server, client and vehicle code for autonomous robot using sbrick (BLE), lego technic and an intel Real Sense camera",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amman Vedi <amman.vedi@gmail.com>",
+  "license": "ISC"
+}
