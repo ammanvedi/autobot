@@ -3,6 +3,7 @@ const runSeq = require( 'run-sequence' );
 const deployConfig = require( './deploy.config.js' );
 const scp = require( 'gulp-scp2' );
 const ssh = require( 'gulp-ssh' );
+const open = require( 'gulp-open' );
 
 gulp.task( 'vehicle-copy', () =>{
     return gulp.src( deployConfig.localSource )
@@ -13,6 +14,17 @@ gulp.task( 'vehicle-copy', () =>{
             dest: deployConfig.remoteSource
         } ) );
 } );
+
+
+
+gulp.task( 'vehicle-open', () => {
+    var options = {
+      uri: 'chrome://inspect/#devices',
+      app: '/Applications/Google\ Chrome.app'
+    };
+    gulp.src( './' )
+      .pipe( open( options ) );
+} )
 
 gulp.task( 'vehicle-run', () => {
     var sshClient = new ssh({
@@ -29,5 +41,5 @@ gulp.task( 'vehicle-run', () => {
 } );
 
 gulp.task( 'vehicle-default', () => {
-    return runSeq( 'vehicle-copy', 'vehicle-run' );
+    return runSeq( 'vehicle-copy', 'vehicle-open', 'vehicle-run' );
 } );
