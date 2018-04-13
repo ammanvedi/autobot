@@ -1,0 +1,16 @@
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Apr 13 16:57:26 2018 from 172.20.10.4
+cd /home/pibot/autobot
+node index.js
+exit
+pibot@raspberrypi:~$ cd /home/pibot/autobot
+pibot@raspberrypi:~/autobot$ node index.js
+abcdef
+pibot@raspberrypi:~/autobot$ exit
+logout
